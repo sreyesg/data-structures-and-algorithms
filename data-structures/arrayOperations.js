@@ -46,4 +46,18 @@ function searchElement(nums, searchValue){
     const numsGreaterThan7 = nums.filter( num => num > searchValue)
     console.log(`numbers greater than 7 are: ${numsGreaterThan7}`)
 }
-searchElement([1,4,5,8,4,2], 2)
+// searchElement([1,4,5,8,4,2], 2)
+
+// INSERT ELEMENT TO ARRAY
+function insertElement(nums, element){
+    // push: inser at the end of array
+    // time complexity O(1)
+    nums.push(element)
+    // unshift insert at the begining 
+    // time complexity: O(n)+1
+    nums.unshift(element)
+    // time complexity O(1)+1
+    nums.splice(5,0,element)
+    return nums
+}
+console.log(insertElement([1,4,5,8,4,2], 2))
