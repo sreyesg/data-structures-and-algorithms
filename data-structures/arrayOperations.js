@@ -21,6 +21,7 @@ function readingArrays(nums){
     }        
 
 }
+//Call function
 //readingArrays([1,4,5,8,4,2])
 
 //SEARCH ELEMENTS 
@@ -46,6 +47,7 @@ function searchElement(nums, searchValue){
     const numsGreaterThan7 = nums.filter( num => num > searchValue)
     console.log(`numbers greater than 7 are: ${numsGreaterThan7}`)
 }
+//Call function
 // searchElement([1,4,5,8,4,2], 2)
 
 // INSERT ELEMENT TO ARRAY
@@ -60,4 +62,18 @@ function insertElement(nums, element){
     nums.splice(5,0,element)
     return nums
 }
-console.log(insertElement([1,4,5,8,4,2], 2))
+//Call function
+// console.log(insertElement([1,4,5,8,4,2], 2))
+
+// REMOVE ELEMENT FROM ARRAY
+function removeElement(nums, element){
+    // pop function. Remove last. 
+    // time complexity O(1)
+    nums.pop()
+    // use splice function
+    // 
+    nums.splice(2,2)
+    // use shift to remove first element of array and return it
+    nums.shift()
+
+}
