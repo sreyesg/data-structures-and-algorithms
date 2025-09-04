@@ -1,9 +1,12 @@
 /*
 ARRAY OPERATIONS
-READ ELEMENTS 
+1. READ ELEMENT
+2. SEARCH ELEMENT
+3. INSERT ELEMENT
+4. REMOVE ELEMENT
 note: return keyword is ommitted to see all examples return values in terminal
 */
-
+// 1. READ ELEMENT
 function readingArrays(nums){
     // access by index 
     // Time Complexity: O(1)
@@ -24,7 +27,7 @@ function readingArrays(nums){
 //Call function
 //readingArrays([1,4,5,8,4,2])
 
-//SEARCH ELEMENTS 
+// 2. SEARCH ELEMENT
 
 function searchElement(nums, searchValue){
     // loop through array
@@ -50,7 +53,7 @@ function searchElement(nums, searchValue){
 //Call function
 // searchElement([1,4,5,8,4,2], 2)
 
-// INSERT ELEMENT TO ARRAY
+// 3. INSERT ELEMENT 
 function insertElement(nums, element){
     // push: inser at the end of array
     // time complexity O(1)
@@ -65,7 +68,7 @@ function insertElement(nums, element){
 //Call function
 // console.log(insertElement([1,4,5,8,4,2], 2))
 
-// REMOVE ELEMENT FROM ARRAY
+// 4. REMOVE ELEMENT
 function removeElement(nums, element){
     // pop function. Remove last. 
     // time complexity O(1)
