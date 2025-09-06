@@ -1,29 +1,31 @@
-/*
-Challenge: Find the Peak Element
-Given an array of integers "nums" where a peak element is an element that is strictly greater than its neighbors.
-Find the index of any one peak element using binary search.
-Input: nums = [1, 2, 1, 3, 5, 6, 4]
+/**
+ * BINARY SEARCH IMPLEMENTATION JAVASCRIPT
+ * Time complexity 0(log N)
+ * First, stablish the lower and upper bounds of where the value can be.
+ * Next, begin a loop in which we keep inspecting the middle value.
+ * if searchValue === valueAtMiddlePoint
+ *      return valueAtMiddlePoint
+ * else if searchValue < valueAtMiddlePoint
+ *      upperBound = midPoint - 1
+ * else 
+ *      lowerBound = midpoint + 1
+ */
+function binarySearch(orderedArray, searchValue){
+    let lowerBound = 0
+    let upperBound = orderedArray.length -1
 
-*/
-// Pseudocode
-// define lower & upper bound
-// find mid-index
-//compare against search value
-//continue until find search value
+    // Loop through array and inspect middle Value
+    while (lowerBound <= upperBound){ 
+        let midPoint = Math.floor((lowerBound + upperBound) / 2) // find middle point
+        if(searchValue === orderedArray[midPoint]){
+            return midPoint
+        }else if(searchValue < orderedArray[midPoint]){
+            upperBound = midPoint -1
 
-function findPeakElement(nums, searchValue){
-    let lowerBound = nums[0] 
-    let upperBound = nums.length -1
-    let midIndex = Math.floor(nums.length/2)
-    console.log(lowerBound,upperBound,midIndex)
-    while (lowerBound < upperBound){
-        if(nums[midIndex]=searchValue){
-            return `the value is at ${midIndex}`
-        }else if(nums[midIndex] < searchValue){
-            lowerBound = midIndex
-        }else {upperBound=midIndex}
-
+        }else{
+            lowerBound = midPoint +1
+        }
+        return -1 // if not found, return -1
     }
-
 }
-findPeakElement([1, 2, 1, 3, 5, 6, 4], 2)
+console.log(binarySearch([1,2,3,4,5,6,7,8,9,14], 14))
