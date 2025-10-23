@@ -1,2 +1,4 @@
 # Table of Contents
-## Table of Contents2
+this is the header
+## Section 1
+## Section 2
